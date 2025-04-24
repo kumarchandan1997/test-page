@@ -40,9 +40,12 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Testimonial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="listofstudent.html">List Of Student</a></li>
+                    <li class="nav-item"><a class="nav-link" href="remainingseat.html">List Of Student</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="remainingseat.html">Remaining Seats</a></li>
                 </ul>
 
                 <!-- Profile Image Dropdown -->
@@ -50,7 +53,7 @@
                     <img src="https://i.pravatar.cc/150?img=3" alt="User" class="user-img dropdown-toggle"
                         id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -65,10 +68,10 @@
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8 col-sm-10">
-                <h3 class="mb-4 text-center">User Information Form</h3>
+                <h3 class="mb-4 text-center">Student Information Form</h3>
                 <form id="userForm">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
+                        <label for="name" class="form-label">Name<span class="text-danger"> *</span></label>
                         <input type="text" class="form-control" id="name" name="name" required>
                     </div>
 
@@ -78,24 +81,29 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="phone" class="form-label">Phone Number</label>
+                        <label for="password" class="form-label">Password<span class="text-danger"> *</span></label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>                    
+
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number<span class="text-danger"> *</span></label>
                         <input type="tel" class="form-control" id="phone" name="phone" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="whatsapp" class="form-label">WhatsApp Number</label>
+                        <label for="whatsapp" class="form-label">WhatsApp Number<span class="text-danger"> *</span></label>
                         <input type="tel" class="form-control" id="whatsapp" name="whatsapp" required>
                     </div>
 
                     <!-- Date & Seat Number -->
                     <div class="row mb-3">
                         <div class="col-12 col-md-6 mb-3 mb-md-0">
-                            <label for="date_of_joining" class="form-label">Date of Joining</label>
+                            <label for="date_of_joining" class="form-label">Date of Joining<span class="text-danger"> *</span></label>
                             <input type="date" class="form-control" id="date_of_joining" name="date_of_joining"
                                 required>
                         </div>
                         <div class="col-12 col-md-6">
-                            <label for="seat_number" class="form-label">Seat Number</label>
+                            <label for="seat_number" class="form-label">Seat Number<span class="text-danger"> *</span></label>
                             <select class="form-select" id="seat_number" name="seat_number" required>
                                 <option value="">Select Seat</option>
                                 <option value="1">1</option>
@@ -136,11 +144,11 @@
                     <!-- Start & End Time -->
                     <div class="row mb-3">
                         <div class="col-12 col-md-6 mb-3 mb-md-0">
-                            <label for="start_time" class="form-label">Start Time</label>
+                            <label for="start_time" class="form-label">Start Time<span class="text-danger"> *</span></label>
                             <input type="time" class="form-control" id="start_time" name="start_time" required>
                         </div>
                         <div class="col-12 col-md-6">
-                            <label for="end_time" class="form-label">End Time</label>
+                            <label for="end_time" class="form-label">End Time<span class="text-danger"> *</span></label>
                             <input type="time" class="form-control" id="end_time" name="end_time" required>
                         </div>
                     </div>
