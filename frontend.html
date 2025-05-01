@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library Website</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    /* General layout margins */
+    .custom-margin {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    /* Header styles */
+    .top-header {
+      background-color: #f8f9fa;
+      padding: 10px 0;
+    }
+    .social-icons a {
+      color: #333;
+      margin-right: 10px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #0d6efd;
+    }
+    .location-text {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #333;
+    }
+
+    /* Sub-header styles */
+    .sub-header {
+      background-color: #e9ecef;
+      padding: 10px 0;
+    }
+    .menu-links a {
+      margin: 0 8px;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .menu-links a:hover {
+      color: #0d6efd;
+    }
+    .library-center {
+      text-align: center;
+    }
+    .library-logo {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background-color: #f2f7fb;
+      padding: 60px 0;
+    }
+
+    /* Services Section */
+    .services-section {
+      background-color: #fff;
+      padding: 60px 0;
+    }
+
+    /* Service Card Styling */
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-body {
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      font-size: 0.9rem;
+      flex-grow: 1;
+      color: #555;
+    }
+    .about-section p {
+        font-size: 1rem;
+        line-height: 1.6;
+        }
+        a {
+    text-decoration: none;
+  }
+
+  .service-img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .sub-header .row > div {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP HEADER -->
+<div style="background-color: #fffaf5; padding: 10px 0;">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <!-- Left: Social + Contact -->
+      <div class="d-flex align-items-center flex-wrap gap-3">
+        <div class="social-icons d-flex gap-2">
+          <a href="#"><i class="fab fa-facebook-f text-dark"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in text-dark"></i></a>
+          <a href="#"><i class="fab fa-instagram text-dark"></i></a>
+          <a href="#"><i class="fab fa-twitter text-dark"></i></a>
+        </div>
+        <div class="ms-3 text-dark">
+          <i class="fas fa-phone-alt me-1"></i> +91-8888888888
+        </div>
+        <div class="ms-3 text-dark">
+          <i class="fas fa-envelope me-1"></i> websupport@justdial.com
+        </div>
+      </div>
+  
+      <!-- Right: Location & Login -->
+      <div class="d-flex align-items-center gap-3 mt-2 mt-md-0">
+        <div class="text-dark"><i class="fas fa-map-marker-alt me-1"></i> Malad West</div>
+        <div class="text-dark"><i class="fas fa-user me-1"></i> <a href="#" class="text-dark">Log In</a> | <a href="#" class="text-dark">Sign Up</a></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- NAVIGATION HEADER -->
+  <nav class="bg-white py-3 shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <!-- Left -->
+      <div class="d-flex gap-4 flex-wrap">
+        <a href="#" class="text-dark fw-bold">HOME</a>
+        <a href="#" class="text-dark">SERVICES</a>
+        <a href="#" class="text-dark">ABOUT</a>
+        <a href="#" class="text-dark">GALLERY</a>
+      </div>
+  
+      <!-- Center -->
+      <div class="text-center">
+        <img src="https://via.placeholder.com/40" class="d-block mx-auto mb-1" alt="Logo">
+        <div class="fw-bold">Noble Library</div>
+      </div>
+  
+      <!-- Right -->
+      <div class="d-flex gap-4 flex-wrap">
+        <a href="#" class="text-dark">VIDEOS</a>
+        <a href="#" class="text-dark">TESTIMONIALS</a>
+        <a href="#" class="text-dark">CONTACT US</a>
+      </div>
+    </div>
+  </nav>
+  
+ <!-- HERO SECTION -->
+<section style="background-color: #fff7f2; padding: 60px 0;">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Image -->
+        <div class="col-md-6 text-center mb-4 mb-md-0">
+          <img src="https://img.freepik.com/free-photo/large-collection-old-books-wooden-bookshelf-generated-by-artificial-intelligence_188544-127262.jpg?t=st=1746088049~exp=1746091649~hmac=90a70b37446c5a3eef5d90ef486e3c682a1c4bdd2ce0daa1c994af75948151f0&w=1380" 
+               alt="Library" class="img-fluid rounded shadow">
+        </div>
+  
+        <!-- Right Text -->
+        <div class="col-md-6 text-center">
+          <h2 class="fw-bold mb-3" style="color: #44200f; font-size: 2rem;">
+            Find Exclusive Range of Books<br>
+            <span style="color: #44200f;">At Our Library</span>
+          </h2>
+          <a href="#" class="btn btn-lg px-5 py-2" style="background-color: #c07c50; color: white; border-radius: 30px;">
+            Enquire Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <!-- Services Section -->
+  <section class="py-5" style="background-color: #ffffff;">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold" style="color: #333333;">Services</h2>
+      </div>
+      <div class="row text-center g-4">
+        <!-- Service 1 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="h-100">
+            <img src="https://img.freepik.com/free-photo/young-woman-reading-book-library_23-2149300691.jpg?t=st=1714581669~exp=1714585269~hmac=764a6b0d83e24713895a5e8a130f8c7fbc29f558cecb71a63d75f53d60f45e4d&w=740" 
+                 alt="Silent Reading" class="img-fluid mb-3 rounded service-img">
+            <h5 class="fw-bold" style="color: #44200f;">Silent Reading</h5>
+            <p class="text-muted">One needs silence to read books or to study, our library has special arrangements for the silence zone.</p>
+            <a href="#" class="btn mt-2 px-4 py-2" style="background-color: #c07c50; color: white; border-radius: 30px;">Enquire Now</a>
+          </div>
+        </div>
+  
+        <!-- Service 2 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="h-100">
+            <img src="https://img.freepik.com/free-photo/young-female-student-holding-stack-books-library_23-2149300676.jpg?t=st=1714581652~exp=1714585252~hmac=0f98319c850c95c18aee25087d5f8e73007d8e7a032d8fdf3de8a9dbe3db23ea&w=740" 
+                 alt="Book Rentals" class="img-fluid mb-3 rounded service-img">
+            <h5 class="fw-bold" style="color: #44200f;">Book Rentals</h5>
+            <p class="text-muted">Apart from reading inside the library, we also provide facility to rent and return the books in time.</p>
+            <a href="#" class="btn mt-2 px-4 py-2" style="background-color: #c07c50; color: white; border-radius: 30px;">Enquire Now</a>
+          </div>
+        </div>
+  
+        <!-- Service 3 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="h-100">
+            <img src="https://img.freepik.com/free-photo/bookshelf-full-books-modern-library_53876-144639.jpg?t=st=1714581732~exp=1714585332~hmac=17323cf755098a4df5b6f7a5cfcc3c51b8c3d4565d0be7a0a1d6f1cba3c2cb6e&w=740" 
+                 alt="Ambience" class="img-fluid mb-3 rounded service-img">
+            <h5 class="fw-bold" style="color: #44200f;">Ambience and Infrastructure</h5>
+            <p class="text-muted">Modern infrastructure, air-conditioned, sound proof, state-of-the-art classrooms that foster learning.</p>
+            <a href="#" class="btn mt-2 px-4 py-2" style="background-color: #c07c50; color: white; border-radius: 30px;">Enquire Now</a>
+          </div>
+        </div>
+  
+        <!-- Service 4 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="h-100">
+            <img src="https://img.freepik.com/free-photo/young-female-student-holding-stack-books-library_23-2149300676.jpg?t=st=1714581652~exp=1714585252~hmac=0f98319c850c95c18aee25087d5f8e73007d8e7a032d8fdf3de8a9dbe3db23ea&w=740" 
+                 alt="Categorized Collection" class="img-fluid mb-3 rounded service-img">
+            <h5 class="fw-bold" style="color: #44200f;">Categorized Book Collection</h5>
+            <p class="text-muted">We have excellent collection of books categorized under children, fiction, cookbooks etc for easy access.</p>
+            <a href="#" class="btn mt-2 px-4 py-2" style="background-color: #c07c50; color: white; border-radius: 30px;">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- About Us Section -->
+<section class="py-5" style="background-color: #ffffff;">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Text Content -->
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+          <h2 class="fw-bold mb-4" style="color: #333333;">About Us</h2>
+          <p class="text-muted fs-5">
+            Learning is a lifetime journey. To make this journey enjoyable, we, Noble Library, situated at Malad West, 
+            Mumbai, Maharashtra, provide an extensive list of books that you will find informative and mind-changing all at once.
+          </p>
+          <p class="text-muted fs-5">
+            Reading is the best way to pass time and what better way than to borrow/purchase books from our library and liberate your mind altogether.
+          </p>
+          <p class="text-muted fs-5">
+            We provide a safe, comfortable and friendly environment that enables learning and advancement of knowledge, and promotes discovery and scholarship.
+          </p>
+          <p class="text-muted fs-5">
+            Sit down with a cup of coffee and unwind at our bookstore with a book of your choice!
+          </p>
+        </div>
+  
+        <!-- Image -->
+        <div class="col-12 col-lg-6 text-center">
+          <img src="https://img.freepik.com/free-photo/large-collection-old-books-wooden-bookshelf-generated-by-artificial-intelligence_188544-127262.jpg?t=st=1746088049~exp=1746091649~hmac=90a70b37446c5a3eef5d90ef486e3c682a1c4bdd2ce0daa1c994af75948151f0&w=1380"
+               alt="Library Image"
+               class="img-fluid rounded-4 shadow"
+               style="max-height: 380px; object-fit: cover; width: 100%;">
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+    <!-- Gallery Section -->
+    <div class="py-5 bg-white">
+        <div class="custom-margin text-center mb-4">
+        <h2 class="fw-bold" style="color: #003366;">Library Gallery</h2>
+        <p class="text-muted">A glimpse into our vibrant and welcoming space</p>
+        </div>
+    
+        <div class="custom-margin">
+        <div class="row g-4">
+            <!-- Image 1 -->
+            <div class="col-12 col-md-4">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=600&q=80"
+                class="img-fluid rounded shadow" alt="Gallery 1">
+            </div>
+            <!-- Image 2 -->
+            <div class="col-12 col-md-4">
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=600&q=80"
+                class="img-fluid rounded shadow" alt="Gallery 2">
+            </div>
+            <!-- Image 3 -->
+            <div class="col-12 col-md-4">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=600&q=80"
+                class="img-fluid rounded shadow" alt="Gallery 3">
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <!-- <div class="py-5 bg-light">
+        <div class="custom-margin text-center mb-4">
+        <h2 class="fw-bold" style="color: #003366;">Library Videos</h2>
+        <p class="text-muted">Discover our space and community in motion</p>
+        </div>
+    
+        <div class="custom-margin">
+        <div class="row g-4">
+            <div class="col-12 col-md-6">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/1LPR7NdLh2o" title="Library Video 1" allowfullscreen></iframe>
+            </div>
+            </div>
+    
+            <div class="col-12 col-md-6">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Library Video 2" allowfullscreen></iframe>
+            </div>
+            </div>
+    
+            <div class="col-12 col-md-6">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/VzGjmVod5uA" title="Library Video 3" allowfullscreen></iframe>
+            </div>
+            </div>
+    
+            <div class="col-12 col-md-6">
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/IUN664s7N-c" title="Library Video 4" allowfullscreen></iframe>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div> -->
+
+    <!-- Testimonial Section -->
+    <!-- Testimonial Section -->
+<section class="py-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center">
+  
+        <!-- Image Left -->
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0 text-center">
+          <img src="https://img.freepik.com/free-photo/stack-vintage-books-against-white-background_23-2147847183.jpg?t=st=1714588973~exp=1714592573~hmac=22175033f36e7eb37402b6b92d31a31e1bb9694df4e89fa60e2013517cbf5e3e&w=1380"
+               alt="Books Image"
+               class="img-fluid rounded-4 shadow"
+               style="max-height: 380px; object-fit: contain;">
+        </div>
+  
+        <!-- Carousel Right -->
+        <div class="col-12 col-lg-6">
+          <h2 class="fw-bold mb-4" style="color: #333;">What Readers Say</h2>
+  
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+  
+              <!-- Testimonial 1 -->
+              <div class="carousel-item active">
+                <div class="bg-light p-4 rounded-3 shadow-sm">
+                  <p class="fs-5 text-secondary mb-2">
+                    <i class="bi bi-quote text-warning fs-3"></i> I love to sit here with a cup of coffee and read my favourite novels in silence.
+                  </p>
+                  <h5 class="fw-semibold">Ramesh Seth</h5>
+                </div>
+              </div>
+  
+              <!-- Testimonial 2 -->
+              <div class="carousel-item">
+                <div class="bg-light p-4 rounded-3 shadow-sm">
+                  <p class="fs-5 text-secondary mb-2">
+                    <i class="bi bi-quote text-warning fs-3"></i> They have an amazing collection of books with great categorisation.
+                  </p>
+                  <h5 class="fw-semibold">Vaibhav Chavhan</h5>
+                </div>
+              </div>
+  
+              <!-- Add more testimonials if needed -->
+  
+            </div>
+  
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+     <!-- Contact Us Section (Centered & Responsive) -->
+    <div class="py-5 bg-light">
+        <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold" style="color: #003366;">Contact Us</h2>
+        </div>
+    
+        <div class="mx-auto" style="max-width: 900px;">
+            <form>
+            <div class="row g-4">
+                <!-- Left Side Inputs -->
+                <div class="col-12 col-md-6">
+                <input type="text" class="form-control mb-3" placeholder="Full Name" required>
+                <input type="tel" class="form-control mb-3" placeholder="Mobile Number" required>
+                <input type="email" class="form-control mb-3" placeholder="Email ID" required>
+                </div>
+    
+                <!-- Right Side Message -->
+                <div class="col-12 col-md-6">
+                <textarea class="form-control h-100" rows="7" placeholder="Message" required></textarea>
+                </div>
+            </div>
+    
+            <!-- Submit Button -->
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary px-5">Send Message</button>
+            </div>
+            </form>
+        </div>
+        </div>
+    </div>
+
+  <!-- Location & Contact Info Section with Space Between Columns -->
+<div class="py-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <!-- Left: Map -->
+        <div class="col-12 col-md-6 pe-md-5"> <!-- Added padding-end on medium+ screens -->
+          <iframe 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=72.8231%2C19.1708%2C72.8560%2C19.1980&amp;layer=mapnik&amp;marker=19.1850%2C72.8395" 
+            style="border:0; width: 100%; height: 350px; border-radius: 8px;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+  
+        <!-- Right: Contact Details -->
+        <div class="col-12 col-md-6 ps-md-5"> <!-- Added padding-start on medium+ screens -->
+          <div class="mb-4 d-flex align-items-start">
+            <i class="bi bi-geo-alt-fill fs-3 text-danger me-3"></i>
+            <div>
+              <h5 class="mb-1">Our Office Address</h5>
+              <p class="mb-0">Palm Court Bldg M, 501/B, 5th Floor, New Link Road,<br>
+                Beside Goregaon Sports Complex, Malad West,<br>
+                Mumbai, Maharashtra 400064</p>
+            </div>
+          </div>
+  
+          <div class="mb-4 d-flex align-items-start">
+            <i class="bi bi-envelope-fill fs-3 text-warning me-3"></i>
+            <div>
+              <h5 class="mb-1">General Enquiries</h5>
+              <p class="mb-0">websupport@justdial.com</p>
+            </div>
+          </div>
+  
+          <div class="mb-4 d-flex align-items-start">
+            <i class="bi bi-telephone-fill fs-3 text-success me-3"></i>
+            <div>
+              <h5 class="mb-1">Call Us</h5>
+              <p class="mb-0">+91-8888888888</p>
+            </div>
+          </div>
+  
+          <div class="d-flex align-items-start">
+            <i class="bi bi-clock-fill fs-3 text-primary me-3"></i>
+            <div>
+              <h5 class="mb-1">Our Timing</h5>
+              <p class="mb-0">Mon - Sun : 10:00 AM - 07:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+<footer class="bg-light py-5">
+    <div class="container">
+      <div class="row gy-4">
+        
+        <!-- Useful Links -->
+        <div class="col-12 col-md-4">
+          <h6 class="fw-bold mb-3">USEFUL LINKS</h6>
+          <div class="row">
+            <div class="col-6">
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-dark text-decoration-none">PRIVACY POLICY</a></li>
+                <li><a href="#" class="text-dark text-decoration-none">SERVICES</a></li>
+                <li><a href="#" class="text-dark text-decoration-none">GALLERY</a></li>
+                <li><a href="#" class="text-dark text-decoration-none">TESTIMONIALS</a></li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-dark text-decoration-none">HOME</a></li>
+                <li><a href="#" class="text-dark text-decoration-none">ABOUT</a></li>
+                <li><a href="#" class="text-dark text-decoration-none">VIDEOS</a></li>
+                <li><a href="#" class="text-dark text-decoration-none">CONTACT US</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="col-12 col-md-5">
+          <h6 class="fw-bold mb-3">CONTACT</h6>
+          <p class="mb-1">Palm Court Bldg M, 501/B, 5th Floor, New Link Road,</p>
+          <p class="mb-1">Beside Goregaon Sports Complex, Malad West,</p>
+          <p class="mb-1">Mumbai, 400064, Maharashtra</p>
+          <p class="mb-1"><strong>Phone:</strong> +91-8888888888</p>
+          <p class="mb-0"><strong>Email:</strong> websupport@justdial.com</p>
+        </div>
+  
+        <!-- Social Media -->
+        <div class="col-12 col-md-3">
+          <h6 class="fw-bold mb-3">CONNECT</h6>
+          <div class="d-flex gap-3">
+            <a href="#"><i class="bi bi-facebook fs-4 text-dark"></i></a>
+            <a href="#"><i class="bi bi-linkedin fs-4 text-dark"></i></a>
+            <a href="#"><i class="bi bi-instagram fs-4 text-dark"></i></a>
+            <a href="#"><i class="bi bi-twitter fs-4 text-dark"></i></a>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copyright -->
+<div class="text-center py-2 text-dark" style="background-color: #ffffff;">
+    © Copyrights 2025 - 2026. <strong>Noble Library.</strong> All Rights Reserved.
+  </div>
+  
+  <!-- Language Bar -->
+  <div class="text-center py-2 text-white" style="background-color: #b77750;">
+    <strong>CHANGE LANGUAGE :</strong>
+    <span class="ms-2">English हिंदी मराठी বাংলা தமிழ் ગુજરાતી ಕನ್ನಡ മലയാളം తెలుగు ਪੰਜਾਬੀ</span>
+  </div>
+  
+  
+  
+  
+  
+    
+  
+  
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</body>
+</html>
